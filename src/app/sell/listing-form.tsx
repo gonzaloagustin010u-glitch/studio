@@ -35,7 +35,6 @@ const formSchema = z.object({
   projectFeatures: z.string().min(10, { message: 'Por favor, enumera algunas características clave.' }),
   targetAudience: z.string().min(3, { message: 'Describe tu público objetivo.' }),
   projectValue: z.string().min(10, { message: 'Describe el valor que aporta tu producto.' }),
-  price: z.coerce.number().positive({ message: 'El precio debe ser un número positivo.' }),
   encoding: z.string().optional(),
   projectDescription: z.string().min(20, { message: 'La descripción debe tener al menos 20 caracteres.' }),
 });
@@ -52,7 +51,6 @@ export function ListingForm() {
       projectFeatures: '',
       targetAudience: '',
       projectValue: '',
-      price: 0,
       encoding: 'UTF-8',
       projectDescription: '',
     },
@@ -136,21 +134,7 @@ export function ListingForm() {
                 </FormItem>
               )}
             />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <FormField
-                control={form.control}
-                name="price"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Precio (ARS)</FormLabel>
-                    <FormControl>
-                      <Input type="number" placeholder="ej., 49999.99" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              {category === 'Proyecto de Programación' && (
+             {category === 'Proyecto de Programación' && (
                 <FormField
                   control={form.control}
                   name="encoding"
@@ -176,7 +160,6 @@ export function ListingForm() {
                   )}
                 />
               )}
-            </div>
           </CardContent>
         </Card>
         

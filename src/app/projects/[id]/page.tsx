@@ -5,7 +5,6 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { CheckCircle, ShoppingCart, Code, Layers } from 'lucide-react';
-import { formatCurrency } from '@/lib/utils';
 import { Separator } from '@/components/ui/separator';
 
 export async function generateStaticParams() {
@@ -51,13 +50,8 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
             {project.description}
           </p>
 
-          <div>
-            <span className="text-4xl font-bold">{formatCurrency(project.price)}</span>
-            <span className="text-muted-foreground">/ pago único</span>
-          </div>
-
           <Button size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
-            <ShoppingCart className="mr-2 h-5 w-5" /> Comprar Ahora
+            <ShoppingCart className="mr-2 h-5 w-5" /> Contactar para comprar
           </Button>
 
           <Separator />
