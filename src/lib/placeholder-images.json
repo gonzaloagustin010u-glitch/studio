@@ -3,50 +3,38 @@
     {
       "id": "project1",
       "description": "Abstract code visualization",
-      "imageUrl": "https://images.unsplash.com/photo-1607431067517-fda93b3e0aee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhYnN0cmFjdCUyMGNvZGV8ZW58MHx8fHwxNzU4OTI5Mzg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMGNvZGV8ZW58MHx8fHwxNzU4OTI5Mzg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "abstract code"
     },
     {
       "id": "project2",
-      "description": "Developer at a computer",
-      "imageUrl": "https://images.unsplash.com/photo-1629904853716-f0bc54eea481?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZGV2ZWxvcGVyJTIwY29tcHV0ZXJ8ZW58MHx8fHwxNzU5MDAxMjAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "developer computer"
+      "description": "Neural network visualization",
+      "imageUrl": "https://images.unsplash.com/photo-1644088379091-d574269d422f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxuZXVyYWwlMjBuZXR3b3JrfGVufDB8fHx8MTc1ODk1MTIwM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "neural network"
     },
     {
       "id": "project3",
-      "description": "Lines of code on a screen",
-      "imageUrl": "https://images.unsplash.com/photo-1650600538903-ec09f670c391?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y29kZSUyMHNjcmVlbnxlbnwwfHx8fDE3NTg5MjQ5NjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "code screen"
-    },
-    {
-      "id": "project4",
-      "description": "Server room with racks",
-      "imageUrl": "https://images.unsplash.com/photo-1680992044138-ce4864c2b962?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c2VydmVyJTIwcm9vbXxlbnwwfHx8fDE3NTg5MTIzMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "server room"
-    },
-    {
-      "id": "project5",
-      "description": "Cyber security concept",
-      "imageUrl": "https://images.unsplash.com/photo-1620825937374-87fc7d6bddc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjeWJlciUyMHNlY3VyaXR5fGVufDB8fHx8MTc1ODkzNDE5MHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "cyber security"
+      "description": "Digital security lock",
+      "imageUrl": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxkaWdpdGFsJTIwc2VjdXJpdHl8ZW58MHx8fHwxNzU4OTk3NTUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "digital security"
     },
     {
       "id": "project6",
-      "description": "Cloud computing diagram",
-      "imageUrl": "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjbG91ZCUyMGNvbXB1dGluZ3xlbnwwfHx8fDE3NTg5MzcxNjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "cloud computing"
+      "description": "UI components on a screen",
+      "imageUrl": "https://images.unsplash.com/photo-1682684123154-c21854fd90cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8VUklMjBjb21wb25lbnRzfGVufDB8fHx8MTc1OTAwMTY2MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "UI components"
     },
     {
       "id": "project7",
-      "description": "Minimalist website on a laptop",
-      "imageUrl": "https://images.unsplash.com/photo-1597534458220-9fb4969f2df5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3ZWJzaXRlJTIwZGVzaWdufGVufDB8fHx8MTc1ODkxMzA0OXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "website design"
+      "description": "Clean and modern website layout",
+      "imageUrl": "https://images.unsplash.com/photo-1581291518570-03a26006fb21?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3ZWJzaXRlJTIwbGF5b3V0fGVufDB8fHx8MTc1ODk4OTU5Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "website layout"
     },
     {
       "id": "project8",
-      "description": "E-commerce website on a tablet",
-      "imageUrl": "https://images.unsplash.com/photo-1758523669622-24b002e00cd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxlY29tbWVyY2UlMjB0YWJsZXR8ZW58MHx8fHwxNzU5MDAxNTE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "ecommerce tablet"
+      "description": "E-commerce product grid",
+      "imageUrl": "https://images.unsplash.com/photo-1561386318-58413a294f3d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxlY29tbWVyY2UlMjBncmlkfGVufDB8fHx8MTc1OTAwMTY2MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ecommerce grid"
     }
   ]
 }
