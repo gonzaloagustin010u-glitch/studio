@@ -79,7 +79,7 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Nuestros Servicios</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-primary">Nuestros Servicios</h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Ofrecemos una gama de productos digitales para satisfacer tus necesidades.
               </p>
@@ -105,7 +105,7 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Proyectos Destacados</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-accent">Proyectos Destacados</h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Descubre una selección curada de proyectos y diseños de primer nivel de creadores talentosos.
               </p>
