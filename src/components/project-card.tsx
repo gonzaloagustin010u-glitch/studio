@@ -32,6 +32,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           )}
         </CardHeader>
         <CardContent className="p-6">
+          <Badge variant="outline" className="mb-2">{project.category}</Badge>
           <CardTitle className="font-headline text-2xl mb-2">{project.name}</CardTitle>
           <p className="text-muted-foreground">{project.tagline}</p>
         </CardContent>

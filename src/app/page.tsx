@@ -13,10 +13,10 @@ export default function Home() {
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
                 <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-primary">
-                  Monetiza Tus Obras Maestras
+                  Monetiza Tus Creaciones Digitales
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  CodeCanvas es el mercado definitivo para desarrolladores. Convierte tus proyectos de programación en ganancias y descubre código de alta calidad de una comunidad global.
+                  CodeCanvas es el mercado definitivo para desarrolladores y diseñadores. Convierte tus proyectos de programación y diseños web en ganancias, y descubre código y diseños de alta calidad de una comunidad global.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -28,7 +28,7 @@ export default function Home() {
                 </Button>
                 <Button asChild size="lg" variant="outline">
                   <Link href="#projects">
-                    Explorar Proyectos
+                    Explorar Mercado
                   </Link>
                 </Button>
               </div>
@@ -36,15 +36,16 @@ export default function Home() {
             <div className="hidden lg:flex items-center justify-center">
                <div className="w-full max-w-md p-6 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl shadow-lg border border-primary/20">
                     <pre className="text-sm text-foreground/80 overflow-x-auto p-4 bg-background/50 rounded-lg"><code>
-<span className="text-purple-400">const</span> <span className="text-blue-400">proyecto</span> = {"{"}
-  <span className="text-red-400">nombre</span>: <span className="text-green-400">'Mi App Increíble'</span>,
-  <span className="text-red-400">autor</span>: <span className="text-green-400">'Tú'</span>,
-  <span className="text-red-400">precio</span>: <span className="text-yellow-400">49999.99</span>,
+<span className="text-purple-400">const</span> <span className="text-blue-400">producto</span> = {"{"}
+  <span className="text-red-400">nombre</span>: <span className="text-green-400">'Mi Diseño Increíble'</span>,
+  <span className="text-red-400">creador</span>: <span className="text-green-400">'Tú'</span>,
+  <span className="text-red-400">precio</span>: <span className="text-yellow-400">29999.99</span>,
+  <span className="text-red-400">categoria</span>: <span className="text-green-400">'Diseño Web'</span>,
   <span className="text-red-400">enVenta</span>: <span className="text-blue-400">true</span>
 {"}"};
 
-<span className="text-purple-400">mercado.</span><span className="text-yellow-400">publicar</span>(proyecto);
-<span className="text-gray-500">// Tu viaje comienza...</span>
+<span className="text-purple-400">mercado.</span><span className="text-yellow-400">publicar</span>(producto);
+<span className="text-gray-500">// Tu viaje creativo comienza...</span>
                     </code></pre>
                 </div>
             </div>
@@ -56,9 +57,9 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Proyectos Destacados</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Productos Destacados</h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Descubre una selección curada de proyectos de primer nivel de desarrolladores talentosos de todo el mundo.
+                Descubre una selección curada de proyectos y diseños de primer nivel de creadores talentosos de todo el mundo.
               </p>
             </div>
           </div>

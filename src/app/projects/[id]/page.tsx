@@ -4,7 +4,7 @@ import { projects } from '@/lib/placeholder-data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { CheckCircle, ShoppingCart, Code } from 'lucide-react';
+import { CheckCircle, ShoppingCart, Code, Layers } from 'lucide-react';
 import { formatCurrency } from '@/lib/utils';
 import { Separator } from '@/components/ui/separator';
 
@@ -42,6 +42,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
         </div>
         <div className="flex flex-col space-y-6">
           <div className="space-y-2">
+            <Badge variant="outline" className="mb-2">{project.category}</Badge>
             <h1 className="font-headline text-4xl font-bold tracking-tight text-primary">{project.name}</h1>
             <p className="text-xl text-muted-foreground">{project.tagline}</p>
           </div>
@@ -73,9 +74,16 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
             </ul>
           </div>
           
-          <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-              <Code className="h-4 w-4" />
-              <span>Codificación de Caracteres: <strong>{project.encoding}</strong></span>
+          <div className="flex items-center space-x-4 text-sm text-muted-foreground">
+              <Layers className="h-4 w-4" />
+              <span>Categoría: <strong>{project.category}</strong></span>
+              {project.encoding && (
+                <>
+                  <Separator orientation="vertical" className="h-4" />
+                  <Code className="h-4 w-4" />
+                  <span>Codificación: <strong>{project.encoding}</strong></span>
+                </>
+              )}
             </div>
         </div>
       </div>

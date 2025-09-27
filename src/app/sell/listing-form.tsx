@@ -30,12 +30,13 @@ import { getAIDescription } from './actions';
 import { Separator } from '@/components/ui/separator';
 
 const formSchema = z.object({
-  projectName: z.string().min(3, { message: 'El nombre del proyecto debe tener al menos 3 caracteres.' }),
+  projectName: z.string().min(3, { message: 'El nombre del producto debe tener al menos 3 caracteres.' }),
+  category: z.string().min(1, { message: 'Por favor, selecciona una categoría.' }),
   projectFeatures: z.string().min(10, { message: 'Por favor, enumera algunas características clave.' }),
   targetAudience: z.string().min(3, { message: 'Describe tu público objetivo.' }),
-  projectValue: z.string().min(10, { message: 'Describe el valor que aporta tu proyecto.' }),
+  projectValue: z.string().min(10, { message: 'Describe el valor que aporta tu producto.' }),
   price: z.coerce.number().positive({ message: 'El precio debe ser un número positivo.' }),
-  encoding: z.string().min(1, { message: 'Por favor, selecciona una codificación de caracteres.' }),
+  encoding: z.string().optional(),
   projectDescription: z.string().min(20, { message: 'La descripción debe tener al menos 20 caracteres.' }),
 });
 
@@ -47,6 +48,7 @@ export function ListingForm() {
     resolver: zodResolver(formSchema),
     defaultValues: {
       projectName: '',
+      category: 'Proyecto de Programación',
       projectFeatures: '',
       targetAudience: '',
       projectValue: '',
@@ -55,6 +57,8 @@ export function ListingForm() {
       projectDescription: '',
     },
   });
+
+  const category = form.watch('category');
 
   const handleGenerateDescription = async () => {
     setIsGenerating(true);
@@ -81,7 +85,7 @@ export function ListingForm() {
     console.log(values);
     toast({
       title: '¡Publicación Enviada!',
-      description: 'Tu proyecto ya está disponible en CodeCanvas. (Esto es una demostración)',
+      description: 'Tu producto ya está disponible en CodeCanvas. (Esto es una demostración)',
     });
     form.reset();
   }
@@ -91,20 +95,42 @@ export function ListingForm() {
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <Card>
           <CardHeader>
-            <CardTitle>Detalles del Proyecto</CardTitle>
+            <CardTitle>Detalles del Producto</CardTitle>
             <CardDescription>
-              Proporciona la información esencial sobre tu proyecto.
+              Proporciona la información esencial sobre tu producto.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
+             <FormField
+              control={form.control}
+              name="category"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Categoría del Producto</FormLabel>
+                   <Select onValueChange={field.onChange} defaultValue={field.value}>
+                      <FormControl>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Selecciona una categoría" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        <SelectItem value="Proyecto de Programación">Proyecto de Programación</SelectItem>
+                        <SelectItem value="Diseño Web">Diseño Web</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  <FormDescription>Elige si estás vendiendo un proyecto de código o un diseño web.</FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
             <FormField
               control={form.control}
               name="projectName"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Nombre del Proyecto</FormLabel>
+                  <FormLabel>Nombre del Producto</FormLabel>
                   <FormControl>
-                    <Input placeholder="ej., Quantum DB" {...field} />
+                    <Input placeholder={category === 'Diseño Web' ? 'ej., Plantilla para Portfolio Creativo' : 'ej., Quantum DB'} {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -124,30 +150,32 @@ export function ListingForm() {
                   </FormItem>
                 )}
               />
-              <FormField
-                control={form.control}
-                name="encoding"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Juego de Caracteres / Codificación</FormLabel>
-                    <Select onValueChange={field.onChange} defaultValue={field.value}>
-                      <FormControl>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Selecciona una codificación" />
-                        </SelectTrigger>
-                      </FormControl>
-                      <SelectContent>
-                        <SelectItem value="UTF-8">UTF-8</SelectItem>
-                        <SelectItem value="UTF-16">UTF-16</SelectItem>
-                        <SelectItem value="ISO-8859-1">ISO-8859-1</SelectItem>
-                        <SelectItem value="Windows-1252">Windows-1252</SelectItem>
-                      </SelectContent>
-                    </Select>
-                    <FormDescription>Asegura la correcta visualización para usuarios internacionales.</FormDescription>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+              {category === 'Proyecto de Programación' && (
+                <FormField
+                  control={form.control}
+                  name="encoding"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Juego de Caracteres / Codificación</FormLabel>
+                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                        <FormControl>
+                          <SelectTrigger>
+                            <SelectValue placeholder="Selecciona una codificación" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="UTF-8">UTF-8</SelectItem>
+                          <SelectItem value="UTF-16">UTF-16</SelectItem>
+                          <SelectItem value="ISO-8859-1">ISO-8859-1</SelectItem>
+                          <SelectItem value="Windows-1252">Windows-1252</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <FormDescription>Asegura la correcta visualización para usuarios internacionales.</FormDescription>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              )}
             </div>
           </CardContent>
         </Card>
@@ -156,7 +184,7 @@ export function ListingForm() {
             <CardHeader>
                 <CardTitle>Descripción Potenciada por IA</CardTitle>
                 <CardDescription>
-                Proporciona algunos puntos clave sobre tu proyecto y nuestra IA escribirá una descripción profesional para ti.
+                Proporciona algunos puntos clave sobre tu producto y nuestra IA escribirá una descripción profesional para ti.
                 </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -167,7 +195,7 @@ export function ListingForm() {
                         <FormItem>
                         <FormLabel>Características Clave (una por línea)</FormLabel>
                         <FormControl>
-                            <Textarea placeholder="- Rendimiento ultrarrápido&#10;- Cumple con ACID&#10;- Escrito en Rust" {...field} rows={4} />
+                            <Textarea placeholder={category === 'Diseño Web' ? "- Diseño minimalista y moderno\n- Totalmente responsive\n- Optimizado para SEO" : "- Rendimiento ultrarrápido\n- Cumple con ACID\n- Escrito en Rust"} {...field} rows={4} />
                         </FormControl>
                         <FormMessage />
                         </FormItem>
@@ -180,7 +208,7 @@ export function ListingForm() {
                         <FormItem>
                         <FormLabel>Público Objetivo</FormLabel>
                         <FormControl>
-                            <Input placeholder="ej., Desarrolladores de aplicaciones financieras en tiempo real" {...field} />
+                            <Input placeholder={category === 'Diseño Web' ? 'ej., Fotógrafos, artistas, freelancers' : 'ej., Desarrolladores de aplicaciones financieras en tiempo real'} {...field} />
                         </FormControl>
                         <FormMessage />
                         </FormItem>
@@ -193,7 +221,7 @@ export function ListingForm() {
                         <FormItem>
                         <FormLabel>Propuesta de Valor</FormLabel>
                         <FormControl>
-                            <Textarea placeholder="¿Qué valor único aporta tu proyecto a los usuarios?" {...field} />
+                            <Textarea placeholder="¿Qué valor único aporta tu producto a los usuarios?" {...field} />
                         </FormControl>
                         <FormMessage />
                         </FormItem>
@@ -218,7 +246,7 @@ export function ListingForm() {
                     name="projectDescription"
                     render={({ field }) => (
                         <FormItem>
-                        <FormLabel>Descripción Completa del Proyecto</FormLabel>
+                        <FormLabel>Descripción Completa del Producto</FormLabel>
                         <FormControl>
                             <Textarea placeholder="Tu descripción generada o escrita manualmente aparecerá aquí." {...field} rows={8} />
                         </FormControl>

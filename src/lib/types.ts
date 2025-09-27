@@ -4,7 +4,8 @@ export interface Project {
   tagline: string;
   description: string;
   price: number;
+  category: string;
   features: string[];
   imageId: string;
-  encoding: string;
+  encoding?: string;
 }
