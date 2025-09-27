@@ -27,29 +27,35 @@ export function Footer() {
   return (
     <footer className="border-t bg-card">
       <div className="container flex flex-col items-center justify-between gap-6 py-8 md:flex-row">
-        <div className="flex flex-col items-center gap-2 md:flex-row md:gap-4">
-          <Code className="h-6 w-6 text-primary" />
+        <div className="flex flex-col items-center gap-2 text-center md:text-left md:flex-row md:gap-4">
+          <Link href="/" className="flex items-center space-x-2">
+            <Code className="h-6 w-6 text-primary" />
+             <span className="font-bold">CodeCanvas</span>
+          </Link>
           <p className="text-sm text-muted-foreground">
             &copy; {year} CodeCanvas. Todos los derechos reservados.
           </p>
         </div>
-        <div className="flex items-center space-x-4">
-          <Link href="https://wa.me/5491144393556" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors">
-            <WhatsAppIcon className="h-6 w-6" />
-            <span className="sr-only">WhatsApp</span>
-          </Link>
-          <Link href="https://instagram.com/itsgonza_" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors">
-            <Instagram className="h-6 w-6" />
-             <span className="sr-only">Instagram</span>
-          </Link>
-          <Link href="#" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-            <Twitter className="h-5 w-5" />
-            <span className="sr-only">Twitter</span>
-          </Link>
-          <Link href="#" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-            <Github className="h-5 w-5" />
-            <span className="sr-only">Github</span>
-          </Link>
+        <div className='flex flex-col items-center gap-4'>
+           <p className="text-sm text-muted-foreground">¡No dudes en contactarnos!</p>
+            <div className="flex items-center space-x-6">
+              <Link href="https://wa.me/5491144393556" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80 transition-colors">
+                <WhatsAppIcon className="h-6 w-6" />
+                <span className="sr-only">WhatsApp</span>
+              </Link>
+              <Link href="https://instagram.com/itsgonza_" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80 transition-colors">
+                <Instagram className="h-6 w-6" />
+                <span className="sr-only">Instagram</span>
+              </Link>
+              <Link href="#" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80 transition-colors">
+                <Twitter className="h-5 w-5" />
+                <span className="sr-only">Twitter</span>
+              </Link>
+              <Link href="#" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80 transition-colors">
+                <Github className="h-5 w-5" />
+                <span className="sr-only">Github</span>
+              </Link>
+            </div>
         </div>
       </div>
     </footer>
