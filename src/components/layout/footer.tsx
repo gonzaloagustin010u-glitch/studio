@@ -28,10 +28,10 @@ export function Footer() {
     <footer className="border-t bg-card">
       <div className="container flex flex-col items-center justify-between gap-6 py-8 md:flex-row">
         <div className="flex flex-col items-center gap-2 text-center md:text-left md:flex-row md:gap-4">
-          <Link href="/" className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2">
             <Code className="h-6 w-6 text-primary" />
              <span className="font-bold">gvnzza programmer</span>
-          </Link>
+          </div>
           <p className="text-sm text-muted-foreground">
             &copy; {year} gvnzza programmer. Todos los derechos reservados.
           </p>
@@ -46,10 +46,6 @@ export function Footer() {
               <Link href="https://instagram.com/itsgonza_" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80 transition-colors">
                 <Instagram className="h-6 w-6" />
                 <span className="sr-only">Instagram</span>
-              </Link>
-              <Link href="#" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80 transition-colors">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
               </Link>
               <Link href="#" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80 transition-colors">
                 <Github className="h-5 w-5" />
