@@ -30,13 +30,13 @@ import { getAIDescription } from './actions';
 import { Separator } from '@/components/ui/separator';
 
 const formSchema = z.object({
-  projectName: z.string().min(3, { message: 'Project name must be at least 3 characters.' }),
-  projectFeatures: z.string().min(10, { message: 'Please list some key features.' }),
-  targetAudience: z.string().min(3, { message: 'Describe your target audience.' }),
-  projectValue: z.string().min(10, { message: 'Describe the value your project provides.' }),
-  price: z.coerce.number().positive({ message: 'Price must be a positive number.' }),
-  encoding: z.string().min(1, { message: 'Please select a character encoding.' }),
-  projectDescription: z.string().min(20, { message: 'Description must be at least 20 characters.' }),
+  projectName: z.string().min(3, { message: 'El nombre del proyecto debe tener al menos 3 caracteres.' }),
+  projectFeatures: z.string().min(10, { message: 'Por favor, enumera algunas características clave.' }),
+  targetAudience: z.string().min(3, { message: 'Describe tu público objetivo.' }),
+  projectValue: z.string().min(10, { message: 'Describe el valor que aporta tu proyecto.' }),
+  price: z.coerce.number().positive({ message: 'El precio debe ser un número positivo.' }),
+  encoding: z.string().min(1, { message: 'Por favor, selecciona una codificación de caracteres.' }),
+  projectDescription: z.string().min(20, { message: 'La descripción debe tener al menos 20 caracteres.' }),
 });
 
 export function ListingForm() {
@@ -63,15 +63,15 @@ export function ListingForm() {
 
     if (result.error) {
       toast({
-        title: 'Generation Failed',
+        title: 'Falló la Generación',
         description: result.error,
         variant: 'destructive',
       });
     } else if (result.description) {
       form.setValue('projectDescription', result.description, { shouldValidate: true });
       toast({
-        title: 'Description Generated!',
-        description: 'The AI-powered description has been added below.',
+        title: '¡Descripción Generada!',
+        description: 'La descripción generada por IA ha sido añadida a continuación.',
       });
     }
     setIsGenerating(false);
@@ -80,8 +80,8 @@ export function ListingForm() {
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
     toast({
-      title: 'Listing Submitted!',
-      description: 'Your project is now live on CodeCanvas. (This is a demo)',
+      title: '¡Publicación Enviada!',
+      description: 'Tu proyecto ya está disponible en CodeCanvas. (Esto es una demostración)',
     });
     form.reset();
   }
@@ -91,9 +91,9 @@ export function ListingForm() {
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <Card>
           <CardHeader>
-            <CardTitle>Project Details</CardTitle>
+            <CardTitle>Detalles del Proyecto</CardTitle>
             <CardDescription>
-              Provide the essential information about your project.
+              Proporciona la información esencial sobre tu proyecto.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
@@ -102,9 +102,9 @@ export function ListingForm() {
               name="projectName"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Project Name</FormLabel>
+                  <FormLabel>Nombre del Proyecto</FormLabel>
                   <FormControl>
-                    <Input placeholder="e.g., Quantum DB" {...field} />
+                    <Input placeholder="ej., Quantum DB" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -116,9 +116,9 @@ export function ListingForm() {
                 name="price"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Price (USD)</FormLabel>
+                    <FormLabel>Precio (ARS)</FormLabel>
                     <FormControl>
-                      <Input type="number" placeholder="e.g., 99.99" {...field} />
+                      <Input type="number" placeholder="ej., 49999.99" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -129,11 +129,11 @@ export function ListingForm() {
                 name="encoding"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Character Set / Encoding</FormLabel>
+                    <FormLabel>Juego de Caracteres / Codificación</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select an encoding" />
+                          <SelectValue placeholder="Selecciona una codificación" />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
@@ -143,7 +143,7 @@ export function ListingForm() {
                         <SelectItem value="Windows-1252">Windows-1252</SelectItem>
                       </SelectContent>
                     </Select>
-                    <FormDescription>Ensures correct display for international users.</FormDescription>
+                    <FormDescription>Asegura la correcta visualización para usuarios internacionales.</FormDescription>
                     <FormMessage />
                   </FormItem>
                 )}
@@ -154,9 +154,9 @@ export function ListingForm() {
         
         <Card>
             <CardHeader>
-                <CardTitle>AI-Powered Description</CardTitle>
+                <CardTitle>Descripción Potenciada por IA</CardTitle>
                 <CardDescription>
-                Provide some key points about your project, and our AI will write a professional description for you.
+                Proporciona algunos puntos clave sobre tu proyecto y nuestra IA escribirá una descripción profesional para ti.
                 </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -165,9 +165,9 @@ export function ListingForm() {
                     name="projectFeatures"
                     render={({ field }) => (
                         <FormItem>
-                        <FormLabel>Key Features (one per line)</FormLabel>
+                        <FormLabel>Características Clave (una por línea)</FormLabel>
                         <FormControl>
-                            <Textarea placeholder="- Blazing fast performance&#10;- ACID compliant&#10;- Written in Rust" {...field} rows={4} />
+                            <Textarea placeholder="- Rendimiento ultrarrápido&#10;- Cumple con ACID&#10;- Escrito en Rust" {...field} rows={4} />
                         </FormControl>
                         <FormMessage />
                         </FormItem>
@@ -178,9 +178,9 @@ export function ListingForm() {
                     name="targetAudience"
                     render={({ field }) => (
                         <FormItem>
-                        <FormLabel>Target Audience</FormLabel>
+                        <FormLabel>Público Objetivo</FormLabel>
                         <FormControl>
-                            <Input placeholder="e.g., Developers of real-time financial applications" {...field} />
+                            <Input placeholder="ej., Desarrolladores de aplicaciones financieras en tiempo real" {...field} />
                         </FormControl>
                         <FormMessage />
                         </FormItem>
@@ -191,9 +191,9 @@ export function ListingForm() {
                     name="projectValue"
                     render={({ field }) => (
                         <FormItem>
-                        <FormLabel>Value Proposition</FormLabel>
+                        <FormLabel>Propuesta de Valor</FormLabel>
                         <FormControl>
-                            <Textarea placeholder="What unique value does your project provide to users?" {...field} />
+                            <Textarea placeholder="¿Qué valor único aporta tu proyecto a los usuarios?" {...field} />
                         </FormControl>
                         <FormMessage />
                         </FormItem>
@@ -207,7 +207,7 @@ export function ListingForm() {
                         ) : (
                             <Wand2 className="mr-2 h-4 w-4" />
                         )}
-                        Generate with AI
+                        Generar con IA
                     </Button>
                 </div>
 
@@ -218,9 +218,9 @@ export function ListingForm() {
                     name="projectDescription"
                     render={({ field }) => (
                         <FormItem>
-                        <FormLabel>Full Project Description</FormLabel>
+                        <FormLabel>Descripción Completa del Proyecto</FormLabel>
                         <FormControl>
-                            <Textarea placeholder="Your generated or manually written description will appear here." {...field} rows={8} />
+                            <Textarea placeholder="Tu descripción generada o escrita manualmente aparecerá aquí." {...field} rows={8} />
                         </FormControl>
                         <FormMessage />
                         </FormItem>
@@ -231,7 +231,7 @@ export function ListingForm() {
 
         <div className="flex justify-end">
           <Button type="submit" size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-            Create Listing
+            Crear Publicación
           </Button>
         </div>
       </form>

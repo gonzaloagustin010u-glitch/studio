@@ -52,17 +52,17 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
 
           <div>
             <span className="text-4xl font-bold">{formatCurrency(project.price)}</span>
-            <span className="text-muted-foreground">/ one-time purchase</span>
+            <span className="text-muted-foreground">/ pago único</span>
           </div>
 
           <Button size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
-            <ShoppingCart className="mr-2 h-5 w-5" /> Buy Now
+            <ShoppingCart className="mr-2 h-5 w-5" /> Comprar Ahora
           </Button>
 
           <Separator />
 
           <div className="space-y-4">
-             <h3 className="text-xl font-semibold">Key Features:</h3>
+             <h3 className="text-xl font-semibold">Características Clave:</h3>
              <ul className="space-y-2">
               {project.features.map((feature, index) => (
                 <li key={index} className="flex items-start">
@@ -75,7 +75,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
           
           <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <Code className="h-4 w-4" />
-              <span>Character Encoding: <strong>{project.encoding}</strong></span>
+              <span>Codificación de Caracteres: <strong>{project.encoding}</strong></span>
             </div>
         </div>
       </div>

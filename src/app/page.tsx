@@ -13,22 +13,22 @@ export default function Home() {
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
                 <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-primary">
-                  Monetize Your Masterpieces
+                  Monetiza Tus Obras Maestras
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  CodeCanvas is the ultimate marketplace for developers. Turn your programming projects into profit and discover high-quality code from a global community.
+                  CodeCanvas es el mercado definitivo para desarrolladores. Convierte tus proyectos de programación en ganancias y descubre código de alta calidad de una comunidad global.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
                   <Link href="/sell">
-                    Start Selling Today
+                    Empieza a Vender Hoy
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
                 <Button asChild size="lg" variant="outline">
                   <Link href="#projects">
-                    Explore Projects
+                    Explorar Proyectos
                   </Link>
                 </Button>
               </div>
@@ -36,15 +36,15 @@ export default function Home() {
             <div className="hidden lg:flex items-center justify-center">
                <div className="w-full max-w-md p-6 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl shadow-lg border border-primary/20">
                     <pre className="text-sm text-foreground/80 overflow-x-auto p-4 bg-background/50 rounded-lg"><code>
-<span className="text-purple-400">const</span> <span className="text-blue-400">project</span> = {"{"}
-  <span className="text-red-400">name</span>: <span className="text-green-400">'My Awesome App'</span>,
-  <span className="text-red-400">author</span>: <span className="text-green-400">'You'</span>,
-  <span className="text-red-400">price</span>: <span className="text-yellow-400">49.99</span>,
-  <span className="text-red-400">forSale</span>: <span className="text-blue-400">true</span>
+<span className="text-purple-400">const</span> <span className="text-blue-400">proyecto</span> = {"{"}
+  <span className="text-red-400">nombre</span>: <span className="text-green-400">'Mi App Increíble'</span>,
+  <span className="text-red-400">autor</span>: <span className="text-green-400">'Tú'</span>,
+  <span className="text-red-400">precio</span>: <span className="text-yellow-400">49999.99</span>,
+  <span className="text-red-400">enVenta</span>: <span className="text-blue-400">true</span>
 {"}"};
 
-<span className="text-purple-400">marketplace.</span><span className="text-yellow-400">list</span>(project);
-<span className="text-gray-500">// Your journey begins...</span>
+<span className="text-purple-400">mercado.</span><span className="text-yellow-400">publicar</span>(proyecto);
+<span className="text-gray-500">// Tu viaje comienza...</span>
                     </code></pre>
                 </div>
             </div>
@@ -56,9 +56,9 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Featured Projects</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Proyectos Destacados</h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Discover a curated selection of top-tier projects from talented developers around the world.
+                Descubre una selección curada de proyectos de primer nivel de desarrolladores talentosos de todo el mundo.
               </p>
             </div>
           </div>

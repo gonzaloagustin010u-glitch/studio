@@ -40,7 +40,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             {formatCurrency(project.price)}
           </Badge>
           <div className="flex items-center text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-            View Details <ArrowRight className="ml-2 h-4 w-4" />
+            Ver Detalles <ArrowRight className="ml-2 h-4 w-4" />
           </div>
         </CardFooter>
       </Card>

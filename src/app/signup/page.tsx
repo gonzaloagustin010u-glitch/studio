@@ -16,20 +16,20 @@ export default function SignupPage() {
     <div className="flex items-center justify-center py-12">
       <Card className="mx-auto max-w-sm">
         <CardHeader>
-          <CardTitle className="text-xl font-headline">Sign Up for CodeCanvas</CardTitle>
+          <CardTitle className="text-xl font-headline">Regístrate en CodeCanvas</CardTitle>
           <CardDescription>
-            Enter your information to create an account and start selling
+            Ingresa tu información para crear una cuenta y empezar a vender
           </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="grid gap-4">
             <div className="grid grid-cols-2 gap-4">
               <div className="grid gap-2">
-                <Label htmlFor="first-name">First name</Label>
+                <Label htmlFor="first-name">Nombre</Label>
                 <Input id="first-name" placeholder="Max" required />
               </div>
               <div className="grid gap-2">
-                <Label htmlFor="last-name">Last name</Label>
+                <Label htmlFor="last-name">Apellido</Label>
                 <Input id="last-name" placeholder="Robinson" required />
               </div>
             </div>
@@ -43,20 +43,20 @@ export default function SignupPage() {
               />
             </div>
             <div className="grid gap-2">
-              <Label htmlFor="password">Password</Label>
+              <Label htmlFor="password">Contraseña</Label>
               <Input id="password" type="password" />
             </div>
             <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
-              Create an account
+              Crear una cuenta
             </Button>
             <Button variant="outline" className="w-full">
-              Sign up with Google
+              Registrarse con Google
             </Button>
           </div>
           <div className="mt-4 text-center text-sm">
-            Already have an account?{" "}
+            ¿Ya tienes una cuenta?{" "}
             <Link href="/login" className="underline">
-              Log in
+              Iniciar sesión
             </Link>
           </div>
         </CardContent>
