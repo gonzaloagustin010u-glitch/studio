@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/toaster"
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'CodeCanvas',
+  title: 'gvnzza programmer',
   description: 'El mercado definitivo para que los desarrolladores compren y vendan proyectos de programación.',
 };
 

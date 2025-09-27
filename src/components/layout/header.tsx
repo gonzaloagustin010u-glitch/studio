@@ -23,7 +23,7 @@ export function Header() {
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Code className="h-6 w-6 text-primary" />
-            <span className="font-bold text-lg">CodeCanvas</span>
+            <span className="font-bold text-lg">gvnzza programmer</span>
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
             {navLinks.map((link) => (
@@ -59,7 +59,7 @@ export function Header() {
               onClick={() => setOpen(false)}
             >
               <Code className="h-6 w-6 mr-2 text-primary" />
-              <span className="font-bold">CodeCanvas</span>
+              <span className="font-bold">gvnzza programmer</span>
             </Link>
             <div className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
               <div className="flex flex-col space-y-3">
@@ -82,7 +82,7 @@ export function Header() {
         </Sheet>
         <Link href="/" className="flex items-center space-x-2 md:hidden">
           <Code className="h-6 w-6 text-primary" />
-          <span className="font-bold">CodeCanvas</span>
+          <span className="font-bold">gvnzza programmer</span>
         </Link>
         
         <div className="flex flex-1 items-center justify-end space-x-2">

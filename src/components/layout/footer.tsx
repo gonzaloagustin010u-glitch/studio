@@ -30,10 +30,10 @@ export function Footer() {
         <div className="flex flex-col items-center gap-2 text-center md:text-left md:flex-row md:gap-4">
           <Link href="/" className="flex items-center space-x-2">
             <Code className="h-6 w-6 text-primary" />
-             <span className="font-bold">CodeCanvas</span>
+             <span className="font-bold">gvnzza programmer</span>
           </Link>
           <p className="text-sm text-muted-foreground">
-            &copy; {year} CodeCanvas. Todos los derechos reservados.
+            &copy; {year} gvnzza programmer. Todos los derechos reservados.
           </p>
         </div>
         <div className='flex flex-col items-center gap-4'>
