@@ -16,7 +16,7 @@ export default function Home() {
                   Ventas de páginas web para tu negocio
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  CodeCanvas es el mercado definitivo para desarrolladores y diseñadores. Convierte tus proyectos de programación y diseños web en ganancias, y descubre código y diseños de alta calidad de una comunidad global.
+                  Impulsa tu presencia online con un sitio web profesional. Explora nuestra selección de páginas web listas para usar, creadas por diseñadores expertos, o publica tus propias creaciones para la venta.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
