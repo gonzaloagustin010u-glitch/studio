@@ -36,16 +36,16 @@ export default function Home() {
             <div className="hidden lg:flex items-center justify-center">
                <div className="w-full max-w-md p-6 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl shadow-lg border border-primary/20">
                     <pre className="text-sm text-foreground/80 overflow-x-auto p-4 bg-background/50 rounded-lg"><code>
-<span className="text-purple-400">const</span> <span className="text-blue-400">producto</span> = {"{"}
-  <span className="text-red-400">nombre</span>: <span className="text-green-400">'Mi Diseño Increíble'</span>,
-  <span className="text-red-400">creador</span>: <span className="text-green-400">'Tú'</span>,
-  <span className="text-red-400">precio</span>: <span className="text-yellow-400">29999.99</span>,
-  <span className="text-red-400">categoria</span>: <span className="text-green-400">'Diseño Web'</span>,
-  <span className="text-red-400">enVenta</span>: <span className="text-blue-400">true</span>
+<span style={{color: '#C38FFF'}}>const</span> <span style={{color: '#79B8FF'}}>producto</span> = {"{"}
+  <span style={{color: '#FF9B9B'}}>nombre</span>: <span style={{color: '#A6E22E'}}>'Mi Diseño Increíble'</span>,
+  <span style={{color: '#FF9B9B'}}>creador</span>: <span style={{color: '#A6E22E'}}>'Tú'</span>,
+  <span style={{color: '#FF9B9B'}}>precio</span>: <span style={{color: '#FFD700'}}>29999.99</span>,
+  <span style={{color: '#FF9B9B'}}>categoria</span>: <span style={{color: '#A6E22E'}}>'Diseño Web'</span>,
+  <span style={{color: '#FF9B9B'}}>enVenta</span>: <span style={{color: '#79B8FF'}}>true</span>
 {"}"};
 
-<span className="text-purple-400">mercado.</span><span className="text-yellow-400">publicar</span>(producto);
-<span className="text-gray-500">// Tu viaje creativo comienza...</span>
+<span style={{color: '#C38FFF'}}>mercado.</span><span style={{color: '#FFD700'}}>publicar</span>(producto);
+<span style={{color: '#8A93A0'}}>// Tu viaje creativo comienza...</span>
                     </code></pre>
                 </div>
             </div>
