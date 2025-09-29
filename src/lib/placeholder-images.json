@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "project1",
-      "description": "SEO text on a digital screen with code in background",
-      "imageUrl": "https://storage.googleapis.com/res-a-team/images/e6616422-50d4-4a25-a130-fc61718a2456.png",
-      "imageHint": "SEO digital"
+      "description": "A person analyzing SEO strategy on a screen",
+      "imageUrl": "https://images.unsplash.com/photo-1709281847981-73a69aa6f770?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxTRU8lMjBzdHJhdGVneXxlbnwwfHx8fDE3NTkxNzc4OTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "SEO strategy"
     },
     {
       "id": "project2",
