@@ -103,7 +103,8 @@ export default function Home() {
                   <HelpCircle className="w-10 h-10 text-accent" />
                 </div>
                 <h3 className="font-headline text-2xl font-bold">Preguntas y Consultas</h3>
-                <Button asChild className="mt-2 bg-green-500 hover:bg-green-600 text-white">
+                
+                <Button asChild className="mt-2 bg-teal-500 hover:bg-teal-600 text-white">
                   <Link href="https://wa.me/5491144393556" target="_blank" rel="noopener noreferrer">
                     <WhatsAppIcon className="mr-2 h-5 w-5" />
                     Chatear por WhatsApp
