@@ -93,13 +93,15 @@ export default function Home() {
                 <p className="text-muted-foreground">
                 ¿Tienes dudas? Visita nuestra sección de preguntas frecuentes o contáctanos para más información abajo de todo esta nuestras redes y numero de whatsapp.
                 </p>
-                <Button asChild className="mt-2 bg-teal-500 hover:bg-teal-600 text-white">
-                  <Link href="https://wa.me/5491144393556" target="_blank" rel="noopener noreferrer">
-                    <WhatsAppIcon className="mr-2 h-5 w-5" />
-                    Chatear por WhatsApp
-                  </Link>
-                </Button>
               </div>
+          </div>
+          <div className="text-center mt-20">
+            <Button asChild size="lg" className="bg-teal-500 hover:bg-teal-600 text-white text-lg py-6 px-10">
+              <Link href="https://wa.me/5491144393556" target="_blank" rel="noopener noreferrer">
+                <WhatsAppIcon className="mr-2 h-5 w-5" />
+                Chatear por WhatsApp
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
