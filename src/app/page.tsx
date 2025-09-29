@@ -117,14 +117,6 @@ export default function Home() {
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
-           <div className="text-center mt-20">
-            <Button asChild size="lg" variant="outline" className="text-lg py-6 px-10">
-              <Link href="/#projects">
-                Ver Todos los Proyectos
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
         </div>
       </section>
     </div>
