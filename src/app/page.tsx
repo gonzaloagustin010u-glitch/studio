@@ -84,7 +84,7 @@ export default function Home() {
                   <HelpCircle className="w-10 h-10 text-accent" />
                 </div>
                 <h3 className="font-headline text-2xl font-bold">Preguntas y Consultas</h3>
-                <p className="text-muted-foreground">¿Tienes dudas? Visita nuestra sección de preguntas frecuentes o contáctanos para más información.</p>
+                <p className="text-muted-foreground">¿Tienes dudas? Visita nuestra sección de preguntas frecuentes o contáctanos para más información abajo de todo esta nuestras redes y numero de whatsapp.</p>
               </div>
           </div>
         </div>
