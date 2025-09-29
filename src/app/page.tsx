@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ProjectCard } from '@/components/project-card';
 import { projects } from '@/lib/placeholder-data';
-import { ArrowRight, Code, Palette, Rocket, LifeBuoy } from 'lucide-react';
+import { ArrowRight, Code, Palette, Rocket, LifeBuoy, HelpCircle } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const services = [
@@ -81,15 +81,10 @@ export default function Home() {
             ))}
              <div className="flex flex-col items-center text-center gap-4">
                 <div className="p-4 bg-background rounded-full border">
-                  <LifeBuoy className="w-10 h-10 text-accent" />
+                  <HelpCircle className="w-10 h-10 text-accent" />
                 </div>
-                <h3 className="font-headline text-2xl font-bold">Soporte Técnico 24hs</h3>
-                <p className="text-muted-foreground">Asistencia técnica continua para resolver tus dudas y problemas directamente por WhatsApp.</p>
-                 <Button asChild size="sm" variant="outline" className="mt-2">
-                  <Link href="https://wa.me/5491144393556" target="_blank" rel="noopener noreferrer">
-                    Contactar por WhatsApp
-                  </Link>
-                </Button>
+                <h3 className="font-headline text-2xl font-bold">Preguntas y Consultas</h3>
+                <p className="text-muted-foreground">¿Tienes dudas? Visita nuestra sección de preguntas frecuentes o contáctanos para más información.</p>
               </div>
           </div>
         </div>
