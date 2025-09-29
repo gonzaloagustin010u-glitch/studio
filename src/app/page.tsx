@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ProjectCard } from '@/components/project-card';
 import { projects } from '@/lib/placeholder-data';
-import { ArrowRight, Code, Palette, Rocket } from 'lucide-react';
+import { ArrowRight, Code, Palette, Rocket, LifeBuoy } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const services = [
@@ -63,13 +63,13 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
             <div className="space-y-3">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-primary">Nuestros Servicios</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline text-accent">Nuestros Servicios</h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Ofrecemos una gama de productos digitales para satisfacer todas tus necesidades.
               </p>
             </div>
           </div>
-          <div className="mx-auto grid items-start gap-10 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
+          <div className="mx-auto grid items-start gap-10 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-2">
             {services.map((service) => (
               <div key={service.title} className="flex flex-col items-center text-center gap-4">
                 <div className="p-4 bg-background rounded-full border">
@@ -79,6 +79,18 @@ export default function Home() {
                 <p className="text-muted-foreground">{service.description}</p>
               </div>
             ))}
+             <div className="flex flex-col items-center text-center gap-4">
+                <div className="p-4 bg-background rounded-full border">
+                  <LifeBuoy className="w-10 h-10 text-accent" />
+                </div>
+                <h3 className="font-headline text-2xl font-bold">Soporte Técnico 24hs</h3>
+                <p className="text-muted-foreground">Asistencia técnica continua para resolver tus dudas y problemas directamente por WhatsApp.</p>
+                 <Button asChild size="sm" variant="outline" className="mt-2">
+                  <Link href="https://wa.me/5491144393556" target="_blank" rel="noopener noreferrer">
+                    Contactar por WhatsApp
+                  </Link>
+                </Button>
+              </div>
           </div>
         </div>
       </section>
