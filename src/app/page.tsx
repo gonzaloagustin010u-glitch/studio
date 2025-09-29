@@ -103,7 +103,6 @@ export default function Home() {
                   <HelpCircle className="w-10 h-10 text-accent" />
                 </div>
                 <h3 className="font-headline text-2xl font-bold">Preguntas y Consultas</h3>
-                <p className="text-muted-foreground">¿Tienes dudas? Visita nuestra sección de preguntas frecuentes o contáctanos para más información abajo de todo esta nuestras redes y numero de whatsapp.</p>
                 <Button asChild className="mt-2 bg-green-500 hover:bg-green-600 text-white">
                   <Link href="https://wa.me/5491144393556" target="_blank" rel="noopener noreferrer">
                     <WhatsAppIcon className="mr-2 h-5 w-5" />
