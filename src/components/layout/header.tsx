@@ -86,12 +86,6 @@ export function Header() {
         </Link>
         
         <div className="flex flex-1 items-center justify-end space-x-2">
-          <Button variant="ghost" asChild>
-            <Link href="/login">Iniciar Sesión</Link>
-          </Button>
-          <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
-            <Link href="/signup">Registrarse</Link>
-          </Button>
         </div>
       </div>
     </header>
