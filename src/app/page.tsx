@@ -61,19 +61,6 @@ export default function Home() {
             <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed">
               Creamos soluciones digitales a medida para potenciar tu negocio. Explora nuestra selección de proyectos y diseños listos para usar.
             </p>
-            <div className="flex flex-col gap-4 min-[400px]:flex-row">
-              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                <Link href="#projects">
-                  Ver Proyectos
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline">
-                <Link href="/sell">
-                  Vender Ahora
-                </Link>
-              </Button>
-            </div>
           </div>
         </div>
       </section>
