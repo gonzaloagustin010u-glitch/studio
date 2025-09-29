@@ -8,10 +8,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import * as React from 'react';
 
-const navLinks = [
-  { href: '/#projects', label: 'Proyectos' },
-  { href: '/sell', label: 'Vende Tu Código' },
-];
+const navLinks: { href: string; label: string }[] = [];
 
 export function Header() {
   const pathname = usePathname();
