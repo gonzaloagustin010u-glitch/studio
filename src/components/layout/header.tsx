@@ -13,41 +13,44 @@ const navLinks: { href: string; label: string }[] = [];
 function GVLogo(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg 
-      width="150" 
+      width="50" 
       height="50" 
-      viewBox="0 0 150 150"
-      fill="currentColor"
+      viewBox="0 0 100 100"
+      fill="none"
+      stroke="currentColor"
       className="text-primary"
       {...props}
     >
-      <g transform="translate(10, 10)">
-        {/* Icon: Monitor with code and pencil */}
-        <g transform="translate(80, 0)">
-          <path d="M12 11.5v-5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-          <path d="M12 11.5h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-          <path d="M18 11.5v3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-          <path d="M14 14.5h8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-          {/* Code icon inside monitor */}
-          <path d="m15 7-2 2 2 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-          <path d="m21 7 2 2-2 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+      <circle cx="50" cy="50" r="45" strokeWidth="4"/>
+      
+      {/* GV Text */}
+      <text x="18" y="85" fontFamily="Arial, sans-serif" fontSize="40" fontWeight="bold" fill="currentColor" stroke="none">G</text>
+      <text x="50" y="85" fontFamily="Arial, sans-serif" fontSize="40" fontWeight="bold" fill="currentColor" stroke="none">V</text>
 
-          {/* Pencil Icon */}
-          <g transform="translate(20, 5) scale(1.2)">
-            <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-          </g>
+      {/* Monitor Icon */}
+      <g strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+        {/* Screen */}
+        <path d="M42 22 H68 C69 22 70 23 70 24 V40 C70 41 69 42 68 42 H42 C41 42 40 41 40 40 V24 C40 23 41 22 42 22 Z" />
+        {/* Stand */}
+        <path d="M50 42 V 48" />
+        <path d="M45 48 H 65" />
+        {/* Code inside screen */}
+        <g strokeWidth="2.5">
+          <path d="M50 29 L 47 32 L 50 35" />
+          <path d="M60 29 L 63 32 L 60 35" />
         </g>
-        
-        {/* Text: GV */}
-        <text x="0" y="70" fontFamily="Playfair Display, serif" fontSize="50" fontWeight="bold">G</text>
-        <text x="45" y="70" fontFamily="Playfair Display, serif" fontSize="50" fontWeight="bold">V</text>
-
-        {/* Text: WEB DEVELOPER & DESIGNER */}
-        <text x="0" y="95" fontFamily="PT Sans, sans-serif" fontSize="12">WEB DEVELOPER</text>
-        <text x="35" y="110" fontFamily="PT Sans, sans-serif" fontSize="12">& DESIGNER</text>
+      </g>
+      
+      {/* Pencil Icon */}
+      <g transform="translate(65, 18) rotate(15)">
+        <path d="M0 0 L15 0" strokeWidth="3" strokeLinecap="round" />
+        <path d="M15 0 L12 -2 L12 2 Z" fill="currentColor" strokeWidth="0" />
+        <rect x="0" y="-3" width="10" height="6" fill="currentColor" stroke="none" />
       </g>
     </svg>
   );
 }
+
 
 export function Header() {
   const pathname = usePathname();
