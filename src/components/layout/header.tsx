@@ -62,7 +62,7 @@ export function Header() {
         <div className="mr-4 flex items-center">
           <Link href="/" className="mr-6 flex items-center space-x-4">
             <GVLogo />
-            <span className="font-pixel text-accent text-lg hidden sm:inline-block">gvnzza programmer</span>
+            <span className="font-bold text-accent text-lg hidden sm:inline-block">gvnzza programmer</span>
           </Link>
           <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
             {navLinks.map((link) => (
@@ -98,7 +98,7 @@ export function Header() {
               onClick={() => setOpen(false)}
             >
               <GVLogo />
-               <span className="font-pixel text-accent text-lg ml-4">gvnzza programmer</span>
+               <span className="font-bold text-accent text-lg ml-4">gvnzza programmer</span>
             </Link>
             <div className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
               <div className="flex flex-col space-y-3">
