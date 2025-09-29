@@ -43,7 +43,7 @@ export function Footer() {
                 <WhatsAppIcon className="h-6 w-6" />
                 <span className="sr-only">WhatsApp</span>
               </Link>
-              <Link href="https://instagram.com/2gvnzzaprogrammer" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80 transition-colors">
+              <Link href="https://instagram.com/gvnzzaprogrammer" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80 transition-colors">
                 <Instagram className="h-6 w-6" />
                 <span className="sr-only">Instagram</span>
               </Link>
