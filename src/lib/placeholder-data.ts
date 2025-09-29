@@ -19,9 +19,9 @@ export const projects: Project[] = [
   },
   {
     id: '2',
-    name: 'CogniGenius AI',
+    name: 'Inteligencia Artificial',
     tagline: 'Un componente avanzado de IA para la comprensión del lenguaje natural.',
-    description: 'Integra un sofisticado procesamiento de lenguaje natural en tus aplicaciones con CogniGenius AI. Este componente proporciona una API simple para comprender, analizar y responder al lenguaje humano con una precisión notable. Ideal para chatbots, automatización de soporte al cliente y análisis de contenido.',
+    description: 'Integra un sofisticado procesamiento de lenguaje natural en tus aplicaciones con este componente de Inteligencia Artificial. Proporciona una API simple para comprender, analizar y responder al lenguaje humano con una precisión notable. Ideal para chatbots, automatización de soporte al cliente y análisis de contenido.',
     price: 24900.00,
     category: 'Proyecto de Programación',
     features: [
