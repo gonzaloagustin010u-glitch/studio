@@ -50,9 +50,6 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
             {project.description}
           </p>
 
-          <Button size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
-            <ShoppingCart className="mr-2 h-5 w-5" /> Contactar para comprar
-          </Button>
 
           <Separator />
 

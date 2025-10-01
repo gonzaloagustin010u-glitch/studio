@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ProjectCard } from '@/components/project-card';
 import { projects } from '@/lib/placeholder-data';
-import { ArrowRight, Code, Palette, Rocket, HelpCircle } from 'lucide-react';
+import { ArrowRight, Code, Palette, Rocket, HelpCircle, Linkedin, Instagram } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 function WhatsAppIcon(props: React.SVGProps<SVGSVGElement>) {
@@ -52,11 +52,34 @@ export default function Home() {
         <div className="container relative px-4 md:px-6">
           <div className="flex flex-col items-center space-y-6">
             <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl/none text-primary">
-              Ventas de páginas web para tu negocio
+              Aplicaciones web para tu negocio
             </h1>
             <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed">
               Creamos soluciones digitales a medida para potenciar tu negocio. Explora nuestra selección de proyectos y diseños listos para usar.
             </p>
+          </div>
+          <div className="mt-12 flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8">
+            <Image
+              src="/images/imagen_perfil.png"
+              alt="Imagen de Perfil"
+              width={300}
+              height={300}
+              className="rounded-lg shadow-lg"
+            />
+            <div className="flex flex-col space-y-4">
+              <Button asChild size="lg" className="w-64 bg-blue-700 hover:bg-blue-800 text-white text-lg py-6 px-10">
+                <Link href="https://www.linkedin.com/in/gonzalo-acosta-b08844352/" target="_blank" rel="noopener noreferrer">
+                  <Linkedin className="mr-2 h-6 w-6" />
+                  LinkedIn
+                </Link>
+              </Button>
+              <Button asChild size="lg" className="w-64 bg-pink-600 hover:bg-pink-700 text-white text-lg py-6 px-10">
+                <Link href="https://www.instagram.com/gvnzzaprogrammer" target="_blank" rel="noopener noreferrer">
+                  <Instagram className="mr-2 h-6 w-6" />
+                  Instagram
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
