@@ -7,18 +7,18 @@ Este documento detalla las modificaciones implementadas en el proyecto para ajus
 Se realizaron los siguientes ajustes en el componente `DigitalRain` para mejorar su estética y funcionalidad:
 
 *   **Ajuste de Color Inicial y Visibilidad:**
-    *   El color del degradado de las letras fue modificado inicialmente a tonos grises más claros (`rgba(200, 200, 200, 1)` y `rgba(100, 100, 100, 1)`) para mejorar la visibilidad.
     *   La opacidad del fondo (`ctx.fillStyle`) se ajustó a `rgba(0, 0, 0, 0.08)` para un efecto de difuminado más pronunciado.
 
 *   **Implementación de Palabras Clave:**
-    *   Se añadió un array de `keywords` (`["SEO", "INTELIGENCIA ARTIFICIAL", "WEB", "404", "CSS", "GEMINI", "QWEN"]`) que ahora caen ocasionalmente junto con los caracteres aleatorios.
+    *   Se añadió un array constante `keywords` con 15 palabras relacionadas con SEO, web, diseño web, e-commerce, etc.: `["SEO", "WEB", "UX/UI", "HTML", "CSS", "JavaScript", "E-commerce", "Marketing Digital", "Analítica Web", "Diseño Responsive", "Desarrollo Frontend", "Desarrollo Backend", "Optimización", "Contenido", "SEM"]`.
     *   Se implementó una lógica para alternar entre la caída de caracteres individuales y palabras completas, asegurando que cada letra de la palabra se muestre secuencialmente en la misma columna.
+    *   **Color de Palabras Clave:** El color de las palabras clave fue modificado para ser blanco puro (`rgba(255, 255, 255, 1)`) en la parte superior e inferior del degradado, para que resalten mucho más.
 
 *   **Ajuste de Velocidad y Difuminado:**
-    *   El intervalo de actualización de la animación (`setInterval`) se aumentó de `33` a `60` milisegundos para ralentizar la caída de las letras, proporcionando un efecto más suave.
+    *   El intervalo de actualización de la animación (`setInterval`) se aumentó de `60` a `90` milisegundos para ralentizar aún más la caída de las letras, proporcionando un efecto más suave y mejorando la legibilidad de las palabras clave.
 
-*   **Cambio Final de Color a Celeste:**
-    *   Los colores del degradado de las letras fueron actualizados a tonos celestes (`rgba(135, 206, 250, 1)` para la parte superior y `rgba(30, 144, 255, 1)` para la parte inferior).
+*   **Cambio Final de Color a Celeste (para caracteres normales):**
+    *   Los colores del degradado de los caracteres normales fueron actualizados a tonos celestes (`rgba(135, 206, 250, 1)` para la parte superior y `rgba(30, 144, 255, 1)` para la parte inferior).
 
 ## 2. Modificaciones en `src/app/globals.css`
 

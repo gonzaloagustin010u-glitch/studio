@@ -24,7 +24,12 @@ export default function DigitalRain() {
     }
 
     const characters = "01{}[]<>/\\|!@#$%^&*()_+-=";
-    const keywords = ["SEO", "INTELIGENCIA ARTIFICIAL", "WEB", "404", "CSS", "GEMINI", "QWEN"];
+    const keywords = [
+      "SEO", "WEB", "UX/UI", "HTML", "CSS", "JavaScript", "E-commerce",
+      "Marketing Digital", "Analítica Web", "Diseño Responsive",
+      "Desarrollo Frontend", "Desarrollo Backend", "Optimización",
+      "Contenido", "SEM"
+    ];
     const activeKeywords: { [key: number]: { word: string; index: number } | null } = {};
 
     function draw() {
@@ -46,9 +51,16 @@ export default function DigitalRain() {
       // Degradado de color para las letras
       for (let i = 0; i < drops.length; i++) {
         const charY = drops[i] * fontSize;
-        const gradient = ctx.createLinearGradient(0, charY - fontSize, 0, charY);
-        gradient.addColorStop(0, "rgba(135, 206, 250, 1)"); // Celeste claro en la parte superior de la letra
-        gradient.addColorStop(1, "rgba(30, 144, 255, 1)"); // Celeste oscuro en la parte inferior de la letra
+        let gradient;
+        if (activeKeywords[i]) { // Si es una palabra clave, usa un color más oscuro
+          gradient = ctx.createLinearGradient(0, charY - fontSize, 0, charY);
+          gradient.addColorStop(0, "rgba(255, 255, 255, 1)"); // Blanco puro en la parte superior
+          gradient.addColorStop(1, "rgba(255, 255, 255, 1)"); // Blanco puro en la parte inferior (sin degradado)
+        } else { // Si son caracteres normales, usa el celeste claro
+          gradient = ctx.createLinearGradient(0, charY - fontSize, 0, charY);
+          gradient.addColorStop(0, "rgba(135, 206, 250, 1)"); // Celeste claro en la parte superior de la letra
+          gradient.addColorStop(1, "rgba(30, 144, 255, 1)"); // Celeste oscuro en la parte inferior de la letra
+        }
         ctx.fillStyle = gradient;
         ctx.font = `${fontSize}px monospace`;
 
@@ -86,7 +98,7 @@ export default function DigitalRain() {
     }
     ctx.restore(); // Restauramos el estado del contexto
 
-    const intervalId = setInterval(draw, 60); // Aumentamos el intervalo para ralentizar la caída
+    const intervalId = setInterval(draw, 90); // Aumentamos aún más el intervalo para ralentizar la caída
 
     function handleResize() {
       if (!canvas) return;
