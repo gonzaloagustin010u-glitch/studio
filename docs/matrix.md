@@ -64,3 +64,27 @@ const InfoRainAnimation = () => {
 export default InfoRainAnimation;
 Usa el Componente: Simplemente importa e inserta <InfoRainAnimation /> en el componente principal de tu landing page, asegurándote de que el contenedor principal tenga position: relative.
 
+## Ideas para Depuración y Mejora de la Animación de Lottie
+
+Si la animación de "lluvia de información" no es visible o no cumple las expectativas, considera los siguientes puntos:
+
+### 1. Depuración de Visibilidad
+- **Consola del Navegador**: Abre las herramientas de desarrollador (F12) en tu navegador y revisa la consola en busca de errores relacionados con Lottie, `react-lottie` o la carga del archivo JSON.
+- **Inspeccionar Elemento**: Usa la herramienta de inspección para verificar si el div que contiene el componente `Lottie` está presente en el DOM y si tiene las dimensiones y el posicionamiento (`position: absolute`, `width: 100%`, `height: 100%`) esperados.
+- **Archivo JSON de Lottie**: Asegúrate de que el archivo `rain-of-info.json` es un archivo Lottie válido y no está corrupto. Puedes probar a visualizarlo en un visor de Lottie online (como LottieFiles) para confirmar que la animación en sí funciona.
+- **Ruta del Archivo JSON**: Confirma que la ruta de importación en `src/components/common/InfoRainAnimation.tsx` (`../../animations/rain-of-info.json`) es correcta y que el archivo existe en esa ubicación.
+
+### 2. Ajustes Visuales
+- **Tamaño de las Partículas**: El archivo JSON actual utiliza partículas pequeñas. Si quieres que la "lluvia de información" sea más prominente, el archivo JSON de Lottie necesitará ser modificado para incluir elementos más grandes o más numerosos.
+- **Colores**: Los colores de las partículas en el JSON actual son básicos. Si el diseño requiere colores específicos, el archivo JSON debe ser ajustado.
+- **Velocidad y Frecuencia**: La velocidad y la frecuencia de la "caída" de la información pueden ajustarse en el archivo JSON o mediante las propiedades `speed` y `direction` del componente `Lottie` si el JSON lo permite.
+- **Opacidad**: Si la animación es demasiado sutil, considera ajustar la opacidad de los elementos en el archivo JSON.
+- **Fondo del Contenedor**: Asegúrate de que el fondo de la sección donde se muestra la animación no la esté "ocultando" por tener un color similar o por ser completamente opaco.
+
+### 3. Consideraciones Adicionales
+- **Animación más Compleja**: El archivo JSON proporcionado es un ejemplo muy básico. Para una verdadera "lluvia de información" con iconos o elementos gráficos más representativos, sería ideal obtener un archivo Lottie diseñado profesionalmente desde plataformas como LottieFiles.
+- **Rendimiento**: Si la animación es muy compleja y afecta el rendimiento, considera optimizar el archivo Lottie o ajustar las propiedades de renderizado.
+- **Interacción**: Si se espera alguna interacción con la animación, esto requerirá lógica adicional en el componente.
+
+Espero que estas ideas te ayuden a depurar y mejorar la animación. Por favor, verifica los puntos de depuración primero y luego considera las opciones de mejora.
+
