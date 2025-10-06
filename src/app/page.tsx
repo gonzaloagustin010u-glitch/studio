@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { ProjectCard } from '@/components/project-card';
 import { projects } from '@/lib/placeholder-data';
 import { ArrowRight, Code, Palette, Rocket, HelpCircle, Linkedin, Instagram } from 'lucide-react';
+import DigitalRain from '@/components/common/digital-rain';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 function WhatsAppIcon(props: React.SVGProps<SVGSVGElement>) {
@@ -43,13 +44,21 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <section className="relative w-full py-24 md:py-32 lg:py-40 bg-background text-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 opacity-30"
+        <div
+          className="absolute inset-0"
           style={{
-            clipPath: 'polygon(0 0, 100% 0, 100% 70%, 0% 100%)',
+            clipPath: 'polygon(0% 0%, 100% 0%, 50% 100%)',
+            WebkitClipPath: 'polygon(0% 0%, 100% 0%, 50% 100%)',
+            maskImage: 'linear-gradient(to bottom, black 75%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to bottom, black 75%, transparent 100%)',
           }}
+        >
+          <DigitalRain />
+        </div>
+        <div
+          className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 opacity-30"
         ></div>
-        <div className="container relative px-4 md:px-6">
+        <div className="container relative px-4 md:px-6 z-10"> {/* Añadimos z-10 para que el contenido esté por encima de la lluvia */}
           <div className="flex flex-col items-center space-y-6">
             <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl/none text-primary">
               Aplicaciones web para tu negocio
@@ -84,7 +93,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="w-full py-20 md:py-28 lg:py-32 bg-card">
+      <section id="services" className="w-full py-5 md:py-7 lg:py-8">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
             <div className="space-y-3">
@@ -115,7 +124,7 @@ export default function Home() {
               </div>
           </div>
           <div className="text-center mt-20">
-            <Button asChild size="lg" className="bg-teal-500 hover:bg-teal-600 text-white text-lg py-6 px-10">
+            <Button asChild size="lg" className="bg-blue-500 hover:bg-blue-600 text-white text-lg py-6 px-10">
               <Link href="https://wa.me/5491144393556" target="_blank" rel="noopener noreferrer">
                 <WhatsAppIcon className="mr-2 h-5 w-5" />
                 Chatear por WhatsApp
@@ -125,7 +134,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects" className="w-full py-20 md:py-28 lg:py-32 bg-background">
+      <section id="projects" className="w-full py-20 md:py-28 lg:py-32">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
             <div className="space-y-3">
